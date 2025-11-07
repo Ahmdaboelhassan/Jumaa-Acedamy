@@ -1,1 +1,56 @@
-/* You can add global styles to this file, and also import other style files */
+/* Google Fonts  */
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Space+Grotesk:wght@300..700&display=swap");
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
+/* Start Tailwind */
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #001b30;
+  --color-secondary: #f5f0ea;
+  --color-ternary: #bb9437;
+}
+
+* {
+  transition: 150ms;
+}
+
+/* :root {
+    --primary-color: #f5f0ea;
+    --secondry-color: #001b30;
+    --text-color-trnary: #bb9437;
+    --text-color-primary: #001b30;
+}
+.dark {
+    --primary-color: #001b30;
+    --secondry-color: #f5f0ea;
+    --text-color-primary: #f5f0ea;
+} */
+/* End Tailwind */
+
+/* Start Fonts */
+.cinzel-decorative-regular {
+  font-family: "Cinzel Decorative", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cinzel-decorative-bold {
+  font-family: "Cinzel Decorative", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.cinzel-decorative-black {
+  font-family: "Cinzel Decorative", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+.space-grotesk {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+/* End Fonts */

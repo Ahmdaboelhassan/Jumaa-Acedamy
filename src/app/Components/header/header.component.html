@@ -1,0 +1,67 @@
+<header class="dark:bg-primary bg-secondary shadow-md">
+  <div class="px-6 py-4 flex justify-between items-center">
+    <!-- Logo -->
+    <img [src]="logoPath()" alt="Logo" class="w-24" />
+
+    <!-- Desktop Menu -->
+    <ul
+      class="hidden lg:flex justify-evenly items-center gap-8 text-xl text-primary dark:text-secondary"
+    >
+      <li class="hover:text-ternary"><a routerLink="Home">Home</a></li>
+      <li class="hover:text-ternary"><a href="">Our Courses</a></li>
+      <li class="hover:text-ternary"><a href="">Pricing Plans</a></li>
+      <li class="hover:text-ternary"><a href="">About Us</a></li>
+      <li class="hover:text-ternary"><a href="">Contact Us</a></li>
+      <li
+        class="bg-primary hover:bg-secondary rounded-2xl text-ternary px-8 py-3 border-ternary border-double hover:border dark:bg-secondary dark:hover:bg-primary"
+      >
+        <a href="#Free">Free trail lesson</a>
+      </li>
+    </ul>
+
+    <!-- Hamburger Button (Mobile Only) -->
+    <button
+      class="lg:hidden hover:scale-120 cursor-pointer text-ternary text-3xl focus:outline-none transition-transform duration-500"
+      (click)="toggleMenu()"
+    >
+      <i
+        class="fa-solid"
+        [ngClass]="menuOpen() ? 'fa-xmark rotate-180' : 'fa-bars'"
+      ></i>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div
+    class="overflow-hidden transition-all duration-500 ease-in-out lg:hidden"
+    [style.maxHeight]="menuOpen() ? '400px' : '0'"
+  >
+    <ul
+      class="flex flex-col items-center gap-6 pb-6 text-lg text-primary dark:text-secondary"
+    >
+      <li class="hover:text-ternary"><a href="">Home</a></li>
+      <li class="hover:text-ternary"><a href="">Our Courses</a></li>
+      <li class="hover:text-ternary"><a href="">Pricing Plan</a></li>
+      <li class="hover:text-ternary"><a href="">About Us</a></li>
+      <li class="hover:text-ternary"><a href="">Contact Us</a></li>
+      <li
+        class="bg-primary hover:bg-secondary rounded-2xl text-ternary px-8 py-3 border-ternary border-double hover:border dark:bg-secondary dark:hover:bg-primary"
+      >
+        <a href="#Free">free trail lesson</a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<button
+  (click)="toggleTheme()"
+  class="inline-flex z-50 h-10 w-[90px] items-center rounded-full dark:bg-secondary bg-primary transition-colors duration-300 justify-between px-2 m-4 fixed cursor-pointer"
+>
+  <i class="fa-solid fa-sun text-ternary"></i>
+  <span
+    class="inline-block absolute h-8 w-8 transform rounded-full bg-ternary transition-transform duration-300"
+    [class.-translate-x-1]="!isDarkMode"
+    [class.translate-x-11]="isDarkMode"
+  ></span>
+  <i class="fa-solid fa-moon text-ternary"></i>
+</button>
