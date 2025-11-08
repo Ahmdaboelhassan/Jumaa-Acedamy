@@ -1,0 +1,61 @@
+<div class="what-make-us-different bg-secondary dark:bg-primary py-24">
+  <div class="main-title flex flex-col justify-center items-center">
+    <h6 class="text-ternary lg:text-6xl text-3xl text-center w-fit mx-auto">
+      What Makes Us <br />
+      Different
+      <p class="mt-5">
+        <svg
+          class="w-4/5 mx-auto"
+          height="19"
+          viewBox="0 0 440 19"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0.592456 5.79107C4.47887 5.37395 8.49326 5.01244 12.6289 4.72741C18.0982 4.34504 23.3788 4.12258 28.4507 4.01829C39.3421 3.62203 50.2335 3.23271 61.1249 2.83644C74.1178 2.48189 87.1106 2.12733 100.104 1.77278L138.853 1.18185C150.391 1.02195 161.936 0.869008 173.474 0.709111C191.168 0.472741 208.862 0.23637 226.557 0H337.882C351.946 0.215514 366.01 0.431028 380.074 0.646542C389.86 1.10538 399.64 1.55726 409.427 2.0161C412.411 2.88511 415.388 3.75412 418.372 4.61617C418.581 4.63703 419.685 4.78302 420.366 5.74241C421.066 6.73655 421.019 8.20344 420.211 9.35053C419.753 9.89974 419.295 10.4559 418.837 11.0051C421.437 11.0468 424.036 11.0816 426.63 11.1233C430.146 11.1998 433.662 11.2832 437.178 11.3597C437.905 11.596 438.632 11.8324 439.353 12.0688C439.495 12.2774 440.229 13.4314 439.926 14.9122C439.515 16.8935 437.615 17.5957 437.521 17.6304C434.504 17.5887 431.486 17.554 428.462 17.5123C422.689 17.6583 416.917 17.7973 411.145 17.9433C408.585 18.2353 406.026 18.5273 403.466 18.8123C403.304 18.8818 402.516 19.1877 401.634 18.8123C400.63 18.3882 400.307 17.4149 400.26 17.2759C400.152 16.9491 399.997 16.2956 400.145 15.5031C400.374 14.2795 401.169 13.5704 401.405 13.3758C402.281 13.1394 403.163 12.903 404.039 12.6667L411.717 11.3666L414.236 10.4211V8.88474C413.468 8.62752 412.626 8.38419 411.717 8.17563C410.202 7.83498 408.814 7.66118 407.588 7.58471C398.529 7.18149 389.47 6.77827 380.41 6.37505C369.256 6.0622 358.095 5.74936 346.941 5.43652C332.689 5.36004 318.43 5.29052 304.177 5.21405C285.452 5.17234 266.728 5.13758 248.003 5.09587C220.946 5.56861 193.889 6.04135 166.833 6.51409C126.473 7.5569 86.1138 8.59971 45.7543 9.64252C31.118 10.0596 16.4884 10.4768 1.852 10.8939L0.363447 10.0666C0.195058 9.64947 -0.0878349 8.78741 0.0199339 7.70289C0.100761 6.84083 0.390389 6.18734 0.592456 5.81193V5.79107Z"
+            fill="url(#paint0_linear_410_296)"
+          />
+          <defs>
+            <linearGradient
+              id="paint0_linear_410_296"
+              x1="-0.00390625"
+              y1="9.49785"
+              x2="439.998"
+              y2="9.49785"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#001B30" />
+              <stop offset="1" stop-color="#789AA7" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </p>
+    </h6>
+  </div>
+  <div
+    class="w-5/6 mt-20 card-holder grid lg:grid-cols-3 grid-cols-1 gap-5 mx-auto"
+  >
+    @for (card of cards; track $index) {
+    <div
+      class="card relative bg-primary dark:bg-white px-2 lg:px-8 py-3 lg:py-10 rounded-xl flex justify-between items-center gap-2 lg:gap-8 overflow-hidden opacity-90"
+    >
+      <span
+        class="overlay absolute w-full h-full bottom-0 left-0 bg-primary dark:bg-white opacity-65 dark:opacity-90"
+      ></span>
+
+      <span class="scale-50 lg:scale-100" [innerHTML]="card.icon"></span>
+
+      <span class="text-ternary flex-1 space-grotesk text-sm lg:text-lg z-10">
+        {{ card.text }}
+      </span>
+    </div>
+    }
+  </div>
+  <div class="mt-20 text-center">
+    <a
+      class="inline-block bg-primary hover:bg-secondary rounded-xl text-ternary px-8 py-3 border-ternary border-double hover:border dark:bg-secondary dark:hover:bg-primary"
+      href="#Free"
+      >Free Trail Lesson</a
+    >
+  </div>
+</div>

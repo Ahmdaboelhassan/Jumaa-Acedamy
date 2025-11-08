@@ -71,17 +71,16 @@
       </li>
     </ul>
   </div>
+  <button
+    (click)="toggleTheme()"
+    class="inline-flex z-50 h-10 w-[90px] items-center rounded-full dark:bg-secondary bg-primary transition-colors duration-300 justify-between px-2 m-4 cursor-pointer absolute"
+  >
+    <i class="fa-solid fa-sun text-ternary"></i>
+    <span
+      class="inline-block absolute h-8 w-8 transform rounded-full bg-ternary transition-transform duration-300"
+      [class.-translate-x-1]="!isDarkMode"
+      [class.translate-x-11]="isDarkMode"
+    ></span>
+    <i class="fa-solid fa-moon text-ternary"></i>
+  </button>
 </header>
-
-<button
-  (click)="toggleTheme()"
-  class="inline-flex z-50 h-10 w-[90px] items-center rounded-full dark:bg-secondary bg-primary transition-colors duration-300 justify-between px-2 m-4 fixed cursor-pointer"
->
-  <i class="fa-solid fa-sun text-ternary"></i>
-  <span
-    class="inline-block absolute h-8 w-8 transform rounded-full bg-ternary transition-transform duration-300"
-    [class.-translate-x-1]="!isDarkMode"
-    [class.translate-x-11]="isDarkMode"
-  ></span>
-  <i class="fa-solid fa-moon text-ternary"></i>
-</button>

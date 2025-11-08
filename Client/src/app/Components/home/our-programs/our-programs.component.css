@@ -1,0 +1,7 @@
+.our-program {
+  background-image: url(/assets/bg3.jpg);
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+}
