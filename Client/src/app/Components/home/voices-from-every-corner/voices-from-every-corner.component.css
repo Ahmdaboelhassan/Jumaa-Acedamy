@@ -1,7 +1,13 @@
 .box {
-  background-image: url(/assets/bg.jpg);
+  background: url(/assets/bg.jpg);
   background-repeat: no-repeat;
   background-blend-mode: multiply;
   background-size: cover;
   background-position: center;
+}
+
+.country {
+  position: absolute;
+  bottom: 0;
+  right: -15%;
 }

@@ -1,0 +1,19 @@
+.plan {
+  background: linear-gradient(
+      var(--secondary-overlay),
+      var(--secondary-overlay)
+    ),
+    url(/assets/bg2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.plan:nth-child(2) {
+  background: linear-gradient(
+      var(--secondary-overlay),
+      var(--secondary-overlay)
+    ),
+    url(/assets/bg5.png);
+  background-size: cover;
+  background-position: center;
+}

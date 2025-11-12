@@ -4,6 +4,7 @@ import { MakeUsDifferentComponent } from './make-us-different/make-us-different.
 import { OurProgramsComponent } from './our-programs/our-programs.component';
 import { HowItWorkComponent } from './how-it-work/how-it-work.component';
 import { VoicesFromEveryCornerComponent } from './voices-from-every-corner/voices-from-every-corner.component';
+import { PlansComponent } from './plans/plans.component';
 
 @Component({
   selector: 'app-home',
@@ -13,6 +14,7 @@ import { VoicesFromEveryCornerComponent } from './voices-from-every-corner/voice
     OurProgramsComponent,
     HowItWorkComponent,
     VoicesFromEveryCornerComponent,
+    PlansComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
