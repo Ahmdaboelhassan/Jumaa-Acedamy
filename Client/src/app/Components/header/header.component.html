@@ -7,14 +7,18 @@
     <ul
       class="hidden lg:flex justify-evenly items-center gap-8 text-xl text-primary dark:text-secondary"
     >
-      <li class="hover:text-ternary" routerLinkActive="text-ternary">
-        <a routerLink="">Home</a>
+      <li
+        class="hover:text-ternary"
+        routerLinkActive="text-ternary"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <a routerLink="/">Home</a>
       </li>
       <li class="hover:text-ternary" routerLinkActive="text-ternary">
-        <a href="">Our Courses</a>
+        <a routerLink="Our-Courses">Our Courses</a>
       </li>
       <li class="hover:text-ternary" routerLinkActive="text-ternary">
-        <a href="">Pricing Plans</a>
+        <a routerLink="Pricing-Plan">Pricing Plans</a>
       </li>
       <li class="hover:text-ternary" routerLinkActive="text-ternary">
         <a href="">About Us</a>
@@ -50,13 +54,22 @@
       class="flex flex-col items-center gap-6 pb-6 text-lg text-primary dark:text-secondary"
     >
       <li class="hover:text-ternary">
-        <a routerLinkActive="text-ternary" routerLink="">Home</a>
+        <a
+          routerLink="/"
+          routerLinkActive="text-ternary"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Home</a
+        >
       </li>
       <li class="hover:text-ternary">
-        <a routerLinkActive="text-ternary" href="">Our Courses</a>
+        <a routerLinkActive="text-ternary" routerLink="Our-Courses"
+          >Our Courses</a
+        >
       </li>
       <li class="hover:text-ternary">
-        <a routerLinkActive="text-ternary" href="">Pricing Plan</a>
+        <a routerLinkActive="text-ternary" routerLink="Pricing-Plan"
+          >Pricing Plan</a
+        >
       </li>
       <li class="hover:text-ternary">
         <a routerLinkActive="text-ternary" href="">About Us</a>
@@ -78,8 +91,8 @@
     <i class="fa-solid fa-sun text-ternary"></i>
     <span
       class="inline-block absolute h-8 w-8 transform rounded-full bg-ternary transition-transform duration-300"
-      [class.-translate-x-1]="!isDarkMode"
-      [class.translate-x-11]="isDarkMode"
+      [class.-translate-x-1]="!isDarkMode()"
+      [class.translate-x-11]="isDarkMode()"
     ></span>
     <i class="fa-solid fa-moon text-ternary"></i>
   </button>

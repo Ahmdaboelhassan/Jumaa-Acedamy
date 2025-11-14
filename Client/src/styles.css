@@ -13,6 +13,7 @@
   --color-ternary2: #bd9739;
   --color-secoundry-blue: #789aa7;
   --color-overlay-blue: #104f67;
+  --color-text-blue: #789aa7;
 }
 
 :root {
@@ -62,7 +63,7 @@
 
 /* Start Components */
 .main-button {
-  padding: 10px 30px;
+  padding: 10px 40px;
   color: white;
   font-family: "Space Grotesk", sans-serif;
   font-weight: 400;

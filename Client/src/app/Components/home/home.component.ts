@@ -5,6 +5,8 @@ import { OurProgramsComponent } from './our-programs/our-programs.component';
 import { HowItWorkComponent } from './how-it-work/how-it-work.component';
 import { VoicesFromEveryCornerComponent } from './voices-from-every-corner/voices-from-every-corner.component';
 import { PlansComponent } from './plans/plans.component';
+import { JoinComponent } from './join/join.component';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +17,7 @@ import { PlansComponent } from './plans/plans.component';
     HowItWorkComponent,
     VoicesFromEveryCornerComponent,
     PlansComponent,
+    JoinComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',

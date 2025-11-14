@@ -1,0 +1,15 @@
+<div class="bg-secondary dark:bg-primary overflow-hidden">
+  <div
+    class="bg-center bg-cover min-h-screen text-center flex flex-col justify-center items-center text-primary"
+    style="border-radius: 0 0 55px 55px"
+    [style.background-image]="sectionBackground()"
+  >
+    <h1 class="text-6xl w-1/2 mb-8 leading-snug">{{ sectionTitle() }}</h1>
+    <p class="w-1/2 text-xs">{{ sectionParaghrach() }}</p>
+    <div class="mt-10 w-full">
+      <button class="main-button">
+        <span class="text-xl"> View All Courses</span>
+      </button>
+    </div>
+  </div>
+</div>
