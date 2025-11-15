@@ -1,0 +1,33 @@
+.plan,
+.plan.family {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.plan {
+  background-image: linear-gradient(
+      var(--secondary-overlay),
+      var(--secondary-overlay)
+    ),
+    url(/assets/bg2.jpg);
+}
+
+.plan.family {
+  background-image: linear-gradient(
+      var(--secondary-overlay),
+      var(--secondary-overlay)
+    ),
+    url(/assets/bg5.png);
+  box-shadow: 5px 5px 5px -3px #104f67;
+}
+
+.durations {
+  background-image: linear-gradient(
+      var(--secondary-overlay),
+      var(--secondary-overlay)
+    ),
+    url(/assets/bg5.png);
+
+  background-repeat: no-repeat;
+}

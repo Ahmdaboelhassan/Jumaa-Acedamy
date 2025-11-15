@@ -21,7 +21,7 @@
         <a routerLink="Pricing-Plan">Pricing Plans</a>
       </li>
       <li class="hover:text-ternary" routerLinkActive="text-ternary">
-        <a href="">About Us</a>
+        <a routerLink="About-Us">About Us</a>
       </li>
       <li class="hover:text-ternary" routerLinkActive="text-ternary">
         <a href="">Contact Us</a>
@@ -72,27 +72,28 @@
         >
       </li>
       <li class="hover:text-ternary">
-        <a routerLinkActive="text-ternary" href="">About Us</a>
+        <a routerLinkActive="text-ternary" routerLink="About-Us">About Us</a>
       </li>
       <li class="hover:text-ternary">
         <a routerLinkActive="text-ternary" href="">Contact Us</a>
       </li>
-      <li
-        class="bg-primary hover:bg-secondary rounded-2xl text-ternary px-8 py-3 border-ternary border-double hover:border dark:bg-secondary dark:hover:bg-primary"
-      >
+      <li class="secondry-button">
         <a href="#Free">free trail lesson</a>
       </li>
     </ul>
   </div>
   <button
     (click)="toggleTheme()"
-    class="inline-flex z-50 h-10 w-[90px] items-center rounded-full dark:bg-secondary bg-primary transition-colors duration-300 justify-between px-2 m-4 cursor-pointer fixed"
+    class="inline-flex z-50 items-center rounded-full dark:bg-secondary bg-primary transition-colors duration-300 justify-between px-2 m-4 cursor-pointer fixed shadow"
+    style="height: 40px; width: 90px"
   >
     <i class="fa-solid fa-sun text-ternary"></i>
     <span
-      class="inline-block absolute h-8 w-8 transform rounded-full bg-ternary transition-transform duration-300"
-      [class.-translate-x-1]="!isDarkMode()"
-      [class.translate-x-11]="isDarkMode()"
+      class="inline-block absolute rounded-full bg-ternary transition-transform duration-300"
+      style="width: 33px; height: 33px"
+      [ngStyle]="{
+        transform: isDarkMode() ? 'translateX(45px)' : 'translateX(-5px)'
+      }"
     ></span>
     <i class="fa-solid fa-moon text-ternary"></i>
   </button>

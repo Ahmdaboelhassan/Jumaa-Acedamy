@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgStyle } from '@angular/common';
 import { Component, computed, OnInit, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
@@ -6,7 +6,7 @@ import { DarkModeService } from '../../Services/dark-mode.service';
 
 @Component({
   selector: 'app-header',
-  imports: [CommonModule, RouterLink, RouterLinkActive, ButtonModule],
+  imports: [CommonModule, RouterLink, RouterLinkActive, ButtonModule, NgStyle],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
 })

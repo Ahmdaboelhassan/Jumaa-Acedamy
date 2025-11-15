@@ -45,14 +45,17 @@ export class HowItWorkComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     const observer = new IntersectionObserver(
-      (entries) => {
+      (entries, obs) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             this.renderer.addClass(entry.target, 'animate');
           } else {
             this.renderer.removeClass(entry.target, 'animate');
           }
+          obs.unobserve(entry.target);
         });
+
+        // stop observing so it happens once only
       },
       {
         threshold: 0.4,

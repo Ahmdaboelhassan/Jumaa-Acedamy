@@ -40,7 +40,10 @@
 * {
   transition: 150ms;
 }
-
+button,
+a {
+  cursor: pointer;
+}
 /* End Tailwind */
 
 /* Start Fonts */
@@ -103,6 +106,40 @@
   color: #050505f0;
 }
 
+/* ternary button */
+.ternary-button {
+  padding: 10px 40px;
+  color: white;
+  font-weight: 400;
+  font-size: 0.8rem;
+  position: relative;
+  z-index: 5;
+  cursor: pointer;
+  border-radius: 10px;
+  outline: none;
+}
+
+.ternary-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    45deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  z-index: -1;
+  opacity: 0;
+  transition: all 300ms;
+}
+
+.ternary-button:hover::before {
+  opacity: 100;
+}
 /* End Components */
 
 /* Start Anamitions */

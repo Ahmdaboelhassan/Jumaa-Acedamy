@@ -1,0 +1,78 @@
+<div
+  class="bg-secondary dark:bg-primary text-primary dark:text-secondary py-20 text-center"
+>
+  <div class="w-4/5 mx-auto">
+    <div>
+      <h3 class="main-title">Choose the plan <br />that suits You</h3>
+    </div>
+  </div>
+  <div
+    class="durations rounded-3xl mx-auto w-fit flex flex-col md:flex-row justify-center items-center mt-10 gap-10"
+  >
+    @for (duraion of duraions; track $index) {
+    <div
+      class="rounded-3xl text-primary py-4 px-7 cursor-pointer transition"
+      [ngClass]="{
+        'bg-ternary': selectedDuration() === $index,
+        'bg-text-blue': selectedDuration() !== $index
+      }"
+      (click)="activeDuraion($event, $index)"
+      (mouseenter)="activeDuraion($event, $index)"
+    >
+      {{ duraion }}
+    </div>
+    }
+  </div>
+  <div
+    class="plans grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-center gap-8 lg:w-10/12 mx-auto mt-10 px-5"
+  >
+    @for (plan of plans; track $index) {
+    <div class="plan rounded-xl py-10 px-5 text-ternary2 col-span-1">
+      <div class="plan-container">
+        <div class="plan-header">
+          <h6 class="mt-5 text-lg transform-all">{{ plan.type }}</h6>
+          <h6 class="mt-5 text-lg">{{ plan.duration }}</h6>
+        </div>
+        <div class="plan-price my-10">
+          <span class="text-6xl me-2">{{ currentPrices()[$index] }}</span>
+          <span>{{ plan.priceDuration }}</span>
+        </div>
+        <div class="plan-details">
+          <ul class="list-disc text-start px-5 space-grotesk">
+            @for (d of plan.details; track $index) {
+            <li class="mb-2">{{ d }}</li>
+            }
+          </ul>
+        </div>
+        <div class="mt-10">
+          <button class="ternary-button bg-ternary">Enroll now</button>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+  <!-- Family Plan -->
+  <div class="px-5">
+    <div
+      class="flex flex-col md:flex-row md:w-1/2 rounded-2xl mt-10 mx-auto px-10 py-10 plan family"
+    >
+      <div class="flex-1 text-start">
+        <h5 class="text-2xl mb-5">Family Plan</h5>
+        <h6 class="text-2xl mb-5">Up to 3 members</h6>
+        <h1 class="text-5xl">save 20%</h1>
+      </div>
+      <div class="flex-1 mt-5 md:mt-0">
+        <div>
+          <ul class="list-disc text-start">
+            @for (li of commonPlanDetails; track $index) {
+            <li>{{ li }}</li>
+            }
+          </ul>
+        </div>
+        <div class="mt-5 text-end">
+          <button class="ternary-button bg-text-blue">Enroll now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
