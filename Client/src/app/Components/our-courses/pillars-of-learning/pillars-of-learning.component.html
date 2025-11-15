@@ -1,0 +1,31 @@
+<div
+  class="py-15 bg-secondary dark:bg-primary text-primary dark:text-secondary text-center"
+>
+  <div class="heading w-3/4 md:w-1/2 mx-auto">
+    <h1 class="main-title">The Three Pillars of Learning</h1>
+    <p class="text-sm md:text-lg space-grotesk text-text-blue mt-5 px-2">
+      At Jumaa Academy, every student's path begins with three essential
+      pillars. Together, they form a balanced journey that nurtures the tongue,
+      the heart, and the mind. Through these three paths, we help you not only
+      read the Quran, but truly live by it.
+    </p>
+  </div>
+  <div
+    class="pillars flex flex-col md:flex-row justify-around items-center gap-4 w-4/5 mt-10 mx-auto"
+  >
+    @for (item of model; track $index) {
+    <div
+      class="pillar flex-1 bg-primary rounded-2xl flex flex-col justify-center items-center px-8 py-14 dark:border-2 border-solid border-secondary"
+      [ngClass]="{ 'md:mt-18': $index === 1 }"
+    >
+      <div [innerHTML]="item.svg"></div>
+      <div class="text-secondary mt-4">
+        <h4 class="text-xl mb-3">{{ item.header }}</h4>
+        <p class="text-sm space-grotesk text-center">
+          <span class="w-3/4 inline-block">{{ item.paragraph }}</span>
+        </p>
+      </div>
+    </div>
+    }
+  </div>
+</div>

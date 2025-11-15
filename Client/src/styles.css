@@ -15,7 +15,15 @@
   --color-overlay-blue: #104f67;
   --color-text-blue: #789aa7;
 }
+@layer utilities {
+  .main-title {
+    @apply text-3xl md:text-6xl;
+  }
 
+  .secondry-button {
+    @apply inline-block bg-primary dark:bg-ternary rounded-xl text-ternary dark:text-primary px-8 py-3 border-ternary border-double border-2 hover:bg-secondary;
+  }
+}
 :root {
   --primary-color: #001b30;
   --secondry-color: #f5f0ea;
@@ -107,4 +115,5 @@
     opacity: 1;
   }
 }
+
 /* End Anamitions */
