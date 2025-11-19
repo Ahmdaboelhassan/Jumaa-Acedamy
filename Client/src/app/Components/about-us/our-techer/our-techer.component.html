@@ -1,0 +1,30 @@
+<div class="bg-secondary dark:bg-primary pb-20">
+  <!-- Teacher Containers -->
+  <div class="text-center md:w-1/2 w-4/5 mx-auto">
+    <h1 class="main-title mb-5">Meet Our Teachers</h1>
+    <p>
+      A team of certified, native Arabic teachers from Al-Azhar and other
+      reputable Islamic institutions. They are not just teachers they are
+      mentors who guide you with patience and sincerity.
+    </p>
+  </div>
+  <div
+    class="flex justify-center flex-wrap items-center gap-10 w-4/5 mx-auto mt-10"
+  >
+    @for (teacher of [].constructor(12); track $index) {
+    <div class="text-center bg-text-blue rounded-3xl col-span-1">
+      <div class="img overflow-hidden w-56">
+        <img
+          [src]="ourTechers[0].image"
+          [alt]="ourTechers[0].name"
+          class="w-full h-full"
+        />
+      </div>
+      <div class="py-5 space-grotesk text-secondary dark:text-primary">
+        {{ ourTechers[0].name }}
+      </div>
+    </div>
+
+    }
+  </div>
+</div>
