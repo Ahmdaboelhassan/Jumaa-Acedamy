@@ -23,6 +23,10 @@
   .secondry-button {
     @apply inline-block bg-primary dark:bg-ternary rounded-xl text-ternary dark:text-primary px-8 py-3 border-ternary border-double border-2 hover:bg-secondary;
   }
+
+  .main-control {
+    @apply bg-white border-gray-100 border border-solid w-full placeholder:text-gray-200 p-2 placeholder:text-xs resize-none rounded-lg;
+  }
 }
 :root {
   --primary-color: #001b30;

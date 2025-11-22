@@ -1,9 +1,10 @@
 import { Component, computed } from '@angular/core';
 import { DarkModeService } from '../../Services/dark-mode.service';
+import { FooterIconsComponent } from './footer-icons/footer-icons.component';
 
 @Component({
   selector: 'app-footer',
-  imports: [],
+  imports: [FooterIconsComponent],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css',
 })

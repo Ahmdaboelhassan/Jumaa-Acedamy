@@ -52,10 +52,10 @@ export class HowItWorkComponent implements OnInit, AfterViewInit {
           } else {
             this.renderer.removeClass(entry.target, 'animate');
           }
-          obs.unobserve(entry.target);
         });
 
         // stop observing so it happens once only
+        //obs.unobserve(entry.target);
       },
       {
         threshold: 0.4,
