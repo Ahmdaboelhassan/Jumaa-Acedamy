@@ -1,6 +1,6 @@
-<div class="landing relative w-full flex flex-col lg:flex-row justify-center">
+<div class="landing w-full flex flex-col lg:flex-row justify-center">
   <div
-    class="bg-secondary dark:bg-zinc-900 opacity-85 flex flex-col justify-center items-start basis-1/2 min-h-[900px] lg:min-h-auto px-10 lg:pt-20"
+    class="relative bg-secondary dark:bg-zinc-900 opacity-85 flex flex-col lg:justify-between items-start basis-1/2 min-h-[900px] lg:min-h-auto px-10 pt-30 pb-10"
   >
     <!-- Left Overlay -->
     <div
@@ -19,13 +19,24 @@
         rules of recitation step-by-step with native teachers who simplify
         complex topics beautifully.
       </p>
-      <div class="lg:mt-16 mt-5 text-center md:text-start">
-        <button
-          class="text-xl bg-primary hover:bg-secondary rounded-2xl text-ternary px-6 py-4 border-ternary border-double hover:border dark:bg-secondary dark:hover:bg-primary"
-        >
-          <a href="#Free">free trail lesson</a>
-        </button>
-      </div>
+    </div>
+    <div class="lg:mt-16 mt-7 mx-auto md:mx-0 md:text-start">
+      <button
+        class="text-xl bg-primary hover:bg-secondary rounded-2xl text-ternary px-6 py-4 border-ternary border-double hover:border dark:bg-secondary dark:hover:bg-primary"
+      >
+        <a routerLink="/Free-Trail-Lesson">free trail lesson</a>
+      </button>
+    </div>
+    <!-- Center Image -->
+    <div
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 overflow-hidden border-ternary border-8 rounded-2xl flex justify-center items-center lg:w-1/3"
+    >
+      <img
+        src="assets/quran.png"
+        alt="Background"
+        class="h-full w-full"
+        loading="lazy"
+      />
     </div>
   </div>
   <!-- Right Overlay -->
@@ -38,21 +49,9 @@
     >
       1
     </span>
-    <div class="flex lg:mt-16">
+    <div class="flex lg:mt-16 lg:me-18">
       <img src="assets/landing-image1.png" class="h-28 me-6" alt="image" />
       <img src="assets/langing-image2.png" class="h-28" alt="image" />
     </div>
-  </div>
-
-  <!-- Center Image -->
-  <div
-    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 overflow-hidden border-ternary border-8 rounded-2xl flex justify-center items-center lg:w-1/3"
-  >
-    <img
-      src="assets/quran.png"
-      alt="Background"
-      class="h-full w-full"
-      loading="lazy"
-    />
   </div>
 </div>

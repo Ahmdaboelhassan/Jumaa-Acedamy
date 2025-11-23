@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-slide-one',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './slide-one.component.html',
-  styleUrl: './slide-one.component.css'
+  styleUrl: './slide-one.component.css',
 })
-export class SlideOneComponent {
-
-}
+export class SlideOneComponent {}
