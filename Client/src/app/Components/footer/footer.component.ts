@@ -1,10 +1,11 @@
 import { Component, computed } from '@angular/core';
 import { DarkModeService } from '../../Services/dark-mode.service';
 import { FooterIconsComponent } from './footer-icons/footer-icons.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
-  imports: [FooterIconsComponent],
+  imports: [FooterIconsComponent, RouterLink],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css',
 })
