@@ -25,7 +25,7 @@ export class PillarsOfLearningComponent {
         paragraph:
           'Learn the language of the Quran to unlock its meaning and beauty. We start from the basics of Arabic letters and grammar, guiding you to understand words and verses as you recite them.',
         svg: this.sanitizer.bypassSecurityTrustHtml(
-          `<svg width="100" height="148" viewBox="0 0 100 148" fill="none" xmlns="http://www.w3.org/2000/svg">
+          `<svg width="100" height="100" viewBox="0 0 100 148" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_592_1444)">
               <path d="M7.29307 90.1768C7.67308 88.357 6.23388 86.3996 8.90206 86.9577C8.90206 87.7584 8.91823 88.5673 8.90206 89.368C8.90206 89.6349 8.9344 89.918 8.90206 90.1768C8.36842 90.1768 7.8267 90.1768 7.29307 90.1768Z" fill="#0E0E0E"/>
               <path d="M89.5536 14.478V15.2869L88.7451 16.0957C88.5268 16.1847 88.1872 16.0067 87.9365 16.0957C87.9365 15.5619 87.9446 15.0199 87.9365 14.4861C88.3893 14.5023 89.303 14.5913 89.5455 14.4861L89.5536 14.478Z" fill="#0E0E0E"/>
