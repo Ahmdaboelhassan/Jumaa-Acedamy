@@ -2,8 +2,11 @@
   class="py-15 bg-secondary dark:bg-primary text-primary dark:text-secondary text-center"
 >
   <div class="heading w-3/4 md:w-1/2 mx-auto">
-    <h1 class="main-title">The Three Pillars of Learning</h1>
-    <p class="text-sm md:text-lg space-grotesk text-text-blue mt-5 px-2">
+    <h1 class="main-title" appSlideUp>The Three Pillars of Learning</h1>
+    <p
+      class="text-sm md:text-lg space-grotesk text-text-blue mt-5 px-2"
+      appSlideUp
+    >
       At Jumaa Academy, every student's path begins with three essential
       pillars. Together, they form a balanced journey that nurtures the tongue,
       the heart, and the mind. Through these three paths, we help you not only
@@ -17,6 +20,7 @@
     <div
       class="pillar flex-1 bg-primary rounded-2xl flex flex-col justify-center items-center px-8 py-14 dark:border-2 border-solid border-secondary"
       [ngClass]="{ 'md:mt-18': $index === 1 }"
+      appSlideUp
     >
       <div [innerHTML]="item.svg"></div>
       <div class="text-secondary mt-4">

@@ -1,9 +1,11 @@
 import { Component, computed } from '@angular/core';
 import { DarkModeService } from '../../../Services/dark-mode.service';
+import { SlideUpDirective } from '../../../directives/slide-up.directive';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-join',
-  imports: [],
+  imports: [SlideUpDirective, RouterLink],
   templateUrl: './join.component.html',
   styleUrl: './join.component.css',
 })

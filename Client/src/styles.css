@@ -158,3 +158,18 @@ a {
 }
 
 /* End Anamitions */
+
+/* Start Transitions */
+/* Initial state */
+.slide-up {
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* When visible */
+.slide-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* End Transitions */

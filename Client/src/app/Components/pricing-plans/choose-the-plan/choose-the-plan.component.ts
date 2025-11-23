@@ -1,5 +1,6 @@
 import { NgClass } from '@angular/common';
 import { Component, signal } from '@angular/core';
+import { SlideUpDirective } from '../../../directives/slide-up.directive';
 
 interface Plan {
   type: string;
@@ -10,7 +11,7 @@ interface Plan {
 
 @Component({
   selector: 'app-choose-the-plan',
-  imports: [NgClass],
+  imports: [NgClass, SlideUpDirective],
   templateUrl: './choose-the-plan.component.html',
   styleUrl: './choose-the-plan.component.css',
 })

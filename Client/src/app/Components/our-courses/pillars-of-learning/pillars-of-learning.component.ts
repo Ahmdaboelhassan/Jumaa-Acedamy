@@ -1,7 +1,7 @@
 import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-import { OurProgramsComponent } from '../../home/our-programs/our-programs.component';
+import { SlideUpDirective } from '../../../directives/slide-up.directive';
 interface Pillar {
   header: string;
   paragraph: string; // optional – for a label or key
@@ -10,7 +10,7 @@ interface Pillar {
 
 @Component({
   selector: 'app-pillars-of-learning',
-  imports: [NgClass],
+  imports: [NgClass, SlideUpDirective],
   templateUrl: './pillars-of-learning.component.html',
   styleUrl: './pillars-of-learning.component.css',
   standalone: true,

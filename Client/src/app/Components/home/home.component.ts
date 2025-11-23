@@ -6,7 +6,6 @@ import { HowItWorkComponent } from './how-it-work/how-it-work.component';
 import { VoicesFromEveryCornerComponent } from './voices-from-every-corner/voices-from-every-corner.component';
 import { PlansComponent } from './plans/plans.component';
 import { JoinComponent } from './join/join.component';
-import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-home',

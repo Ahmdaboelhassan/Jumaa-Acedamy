@@ -36,6 +36,6 @@ export class LandingSliderComponent implements AfterViewInit {
   startAutoPlay() {
     setInterval(() => {
       this.carousel.next();
-    }, 4000); // 4 seconds
+    }, 5000);
   }
 }

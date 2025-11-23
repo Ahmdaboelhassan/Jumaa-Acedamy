@@ -3,17 +3,18 @@
     class="bg-center bg-cover py-48 text-center flex flex-col justify-center items-center text-primary bg-gray-300"
     style="border-radius: 0 0 55px 55px"
     [style.background-image]="sectionBackground()"
+    appSlideUp
   >
-    <h1 class="text-4xl md:text-6xl w-3/5 mb-8 leading-snug">
+    <h1 class="text-4xl md:text-6xl w-3/5 mb-8 leading-snug" appSlideUp>
       {{ sectionTitle() }}
     </h1>
-    <p class="w-3/5 font-bold text-sm md:text-lg space-grotesk">
+    <p class="w-3/5 font-bold text-sm md:text-lg space-grotesk" appSlideUp>
       {{ sectionParaghrach() }}
     </p>
     <div class="mt-10 w-full">
-      <button class="main-button">
+      <a class="main-button" routerLink="/Our-Courses" appSlideUp>
         <span class="text-xl"> View All Courses</span>
-      </button>
+      </a>
     </div>
   </div>
 </div>

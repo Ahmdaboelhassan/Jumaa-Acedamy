@@ -49,6 +49,7 @@
   <div
     class="overflow-hidden transition-all duration-500 ease-in-out lg:hidden"
     [style.maxHeight]="menuOpen() ? '400px' : '0'"
+    (click)="toggleMenu()"
   >
     <ul
       class="flex flex-col items-center gap-6 pb-6 text-lg text-primary dark:text-secondary"

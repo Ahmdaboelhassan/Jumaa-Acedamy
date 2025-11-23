@@ -6,6 +6,7 @@ import {
   Renderer2,
   ViewChild,
 } from '@angular/core';
+import { SlideUpDirective } from '../../../directives/slide-up.directive';
 @Component({
   selector: 'app-how-it-work',
   imports: [],
@@ -49,16 +50,14 @@ export class HowItWorkComponent implements OnInit, AfterViewInit {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             this.renderer.addClass(entry.target, 'animate');
-          } else {
-            this.renderer.removeClass(entry.target, 'animate');
+
+            // Stop observing after first trigger
+            obs.unobserve(entry.target);
           }
         });
-
-        // stop observing so it happens once only
-        //obs.unobserve(entry.target);
       },
       {
-        threshold: 0.4,
+        threshold: 0.3,
       }
     );
 

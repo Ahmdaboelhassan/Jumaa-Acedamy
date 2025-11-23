@@ -3,11 +3,14 @@
 >
   <div class="w-4/5 mx-auto">
     <div>
-      <h3 class="main-title">Choose the plan <br />that suits You</h3>
+      <h3 class="main-title" appSlideUp>
+        Choose the plan <br />that suits You
+      </h3>
     </div>
   </div>
   <div
     class="durations rounded-3xl mx-auto w-fit flex flex-col md:flex-row justify-center items-center mt-10 gap-10"
+    appSlideUp
   >
     @for (duraion of duraions; track $index) {
     <div
@@ -27,7 +30,7 @@
     class="plans grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-center gap-8 lg:w-10/12 mx-auto mt-10 px-5"
   >
     @for (plan of plans; track $index) {
-    <div class="plan rounded-xl py-10 px-5 text-ternary2 col-span-1">
+    <div class="plan rounded-xl py-10 px-5 text-ternary2 col-span-1" appSlideUp>
       <div class="plan-container">
         <div class="plan-header">
           <h6 class="mt-5 text-lg transform-all">{{ plan.type }}</h6>
@@ -55,6 +58,7 @@
   <div class="px-5">
     <div
       class="flex flex-col md:flex-row md:w-1/2 rounded-2xl mt-10 mx-auto px-10 py-10 plan family"
+      appSlideUp
     >
       <div class="flex-1 text-start">
         <h5 class="text-2xl mb-5">Family Plan</h5>

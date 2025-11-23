@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { SlideUpDirective } from '../../../directives/slide-up.directive';
 
 @Component({
   selector: 'app-plans',
-  imports: [],
+  imports: [SlideUpDirective],
   templateUrl: './plans.component.html',
-  styleUrl: './plans.component.css'
+  styleUrl: './plans.component.css',
 })
-export class PlansComponent {
-
-}
+export class PlansComponent {}

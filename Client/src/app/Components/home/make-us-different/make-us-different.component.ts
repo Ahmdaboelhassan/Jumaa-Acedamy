@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { SlideUpDirective } from '../../../directives/slide-up.directive';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-make-us-different',
-  imports: [],
+  imports: [SlideUpDirective, RouterLink],
   templateUrl: './make-us-different.component.html',
   styleUrl: './make-us-different.component.css',
 })

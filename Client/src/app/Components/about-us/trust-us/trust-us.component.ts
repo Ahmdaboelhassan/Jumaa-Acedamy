@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { SlideUpDirective } from '../../../directives/slide-up.directive';
 
 @Component({
   selector: 'app-trust-us',
-  imports: [],
+  imports: [SlideUpDirective],
   templateUrl: './trust-us.component.html',
-  styleUrl: './trust-us.component.css'
+  styleUrl: './trust-us.component.css',
 })
-export class TrustUsComponent {
-
-}
+export class TrustUsComponent {}

@@ -1,6 +1,9 @@
 <div class="what-make-us-different bg-secondary dark:bg-primary py-24">
   <div class="main-title flex flex-col justify-center items-center">
-    <h6 class="text-ternary lg:text-6xl text-3xl text-center w-fit mx-auto">
+    <h6
+      class="text-ternary lg:text-6xl text-3xl text-center w-fit mx-auto"
+      appSlideUp
+    >
       What Makes Us <br />
       Different
       <p class="mt-5">
@@ -38,6 +41,7 @@
     @for (card of cards; track $index) {
     <div
       class="card relative bg-primary dark:bg-white px-2 lg:px-8 py-3 lg:py-10 rounded-xl flex justify-between items-center gap-2 lg:gap-8 overflow-hidden opacity-90"
+      appSlideUp
     >
       <span
         class="overlay absolute w-full h-full bottom-0 left-0 bg-primary dark:bg-white opacity-65 dark:opacity-90"
@@ -51,10 +55,10 @@
     </div>
     }
   </div>
-  <div class="mt-20 text-center">
+  <div class="mt-20 text-center" appSlideUp>
     <a
       class="inline-block bg-primary hover:bg-secondary rounded-xl text-ternary px-8 py-3 border-ternary border-double hover:border dark:bg-secondary dark:hover:bg-primary"
-      href="#Free"
+      routerLink="/Free-Trail-Lesson"
       >Free Trail Lesson</a
     >
   </div>
