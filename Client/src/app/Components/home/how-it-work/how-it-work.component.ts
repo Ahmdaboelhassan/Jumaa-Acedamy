@@ -9,7 +9,7 @@ import {
 import { SlideUpDirective } from '../../../directives/slide-up.directive';
 @Component({
   selector: 'app-how-it-work',
-  imports: [],
+  imports: [SlideUpDirective],
   templateUrl: './how-it-work.component.html',
   styleUrl: './how-it-work.component.css',
 })

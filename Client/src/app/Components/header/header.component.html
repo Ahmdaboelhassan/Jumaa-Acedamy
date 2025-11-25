@@ -87,7 +87,7 @@
   </div>
   <button
     (click)="toggleTheme()"
-    class="inline-flex z-50 items-center rounded-full dark:bg-secondary bg-primary transition-colors duration-300 justify-between px-2 m-4 cursor-pointer absolute shadow"
+    class="inline-flex z-50 items-center rounded-full dark:bg-secondary bg-primary transition-colors duration-300 justify-between px-2 m-4 cursor-pointer fixed shadow"
     style="height: 40px; width: 90px"
   >
     <i class="fa-solid fa-sun text-ternary"></i>
@@ -101,3 +101,12 @@
     <i class="fa-solid fa-moon text-ternary"></i>
   </button>
 </header>
+
+<a
+  class="fixed bottom-0 right-5 rounded-tl-2xl rounded-tr-2xl shadow-2xl hover:scale-110 bg-primary text-secondary dark:bg-secondary dark:text-primary px-10 py-3 z-100 flex items-center justify-between"
+  href="https://api.whatsapp.com/send?phone=201282705753"
+  target="_blank"
+>
+  <i class="fa-brands fa-whatsapp fa-2xl me-2"></i>
+  <span> Need Help </span>
+</a>

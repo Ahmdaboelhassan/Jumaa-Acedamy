@@ -9,5 +9,6 @@
 .country {
   position: absolute;
   bottom: 0;
-  right: -15%;
+  right: 5px;
+  max-width: 50px;
 }
