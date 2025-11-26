@@ -26,6 +26,7 @@ export interface Student {
   ],
 })
 export class VoicesFromEveryCornerComponent implements AfterViewInit {
+  isFading = signal(false);
   students: Student[] = [
     {
       Comment:
@@ -89,13 +90,14 @@ export class VoicesFromEveryCornerComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     setInterval(() => {
-      debugger;
-      let nextStudent = ++this.currentStudent;
-      if (nextStudent > this.students.length - 1) {
-        nextStudent = 0;
-      }
-      this.currentStudent = nextStudent;
-      this.student.set(this.students[nextStudent]);
+      this.isFading.set(true);
+
+      setTimeout(() => {
+        this.currentStudent = (this.currentStudent + 1) % this.students.length;
+
+        this.student.set(this.students[this.currentStudent]);
+        this.isFading.set(false);
+      }, 400);
     }, 3000);
   }
 

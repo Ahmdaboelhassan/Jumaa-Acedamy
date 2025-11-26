@@ -11,11 +11,25 @@ import { DarkModeService } from '../../Services/dark-mode.service';
   styleUrl: './header.component.css',
 })
 export class HeaderComponent implements OnInit {
+  isFading = false;
   logoPath = computed(() =>
     this.darkModeService.isDarkMode()
       ? 'assets/logo-dark.png'
       : 'assets/logo-light.png'
   );
+
+  whatsApptexts = [
+    'Need Help!',
+    'Chat with Us',
+    'Message Us',
+    'Get Help',
+    'Ask a Question',
+    "We're Here to Help",
+    'Book an Appointment',
+  ];
+
+  currentWhatsAppText = 0;
+  whatsAppText = signal(this.whatsApptexts[this.currentWhatsAppText]);
 
   isDarkMode = computed(() => this.darkModeService.isDarkMode());
 
@@ -25,6 +39,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.darkModeService.checkTheme();
+    this.changeWhatsAppButtonText();
   }
 
   toggleTheme() {
@@ -33,5 +48,23 @@ export class HeaderComponent implements OnInit {
 
   toggleMenu() {
     this.menuOpen.update((open) => !open);
+  }
+
+  changeWhatsAppButtonText() {
+    setInterval(() => {
+      // Start fade out
+      this.isFading = true;
+
+      setTimeout(() => {
+        // Update text after fade-out completes
+        this.currentWhatsAppText =
+          (this.currentWhatsAppText + 1) % this.whatsApptexts.length;
+
+        this.whatsAppText.set(this.whatsApptexts[this.currentWhatsAppText]);
+
+        // Start fade-in
+        this.isFading = false;
+      }, 400); // Must match CSS transition time
+    }, 3000);
   }
 }

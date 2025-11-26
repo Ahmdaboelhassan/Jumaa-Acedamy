@@ -54,7 +54,8 @@
           </div>
           <div class="col-span-2" appSlideUp>
             <p
-              class="space-grotesk mt-10 mb-2 text-xs md:text-sm lg:text-lg min-h-[100px]"
+              class="space-grotesk mt-10 mb-2 text-xs md:text-sm lg:text-lg min-h-[100px] fade-text"
+              [class.fade]="isFading()"
               appSlideUp
             >
               <q>{{ student().Comment }}</q>

@@ -4,4 +4,5 @@
   background-blend-mode: multiply;
   background-size: cover;
   background-position: center;
+  min-height: 130px;
 }

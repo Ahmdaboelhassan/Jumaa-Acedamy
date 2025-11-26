@@ -103,10 +103,13 @@
 </header>
 
 <a
-  class="fixed bottom-0 right-5 rounded-tl-2xl rounded-tr-2xl shadow-2xl hover:scale-110 bg-primary text-secondary dark:bg-secondary dark:text-primary px-10 py-3 z-100 flex items-center justify-between"
+  class="fixed -bottom-1 right-5 rounded-tl-2xl rounded-tr-2xl shadow-2xl hover:scale-110 bg-primary text-secondary dark:bg-secondary dark:text-primary px-10 py-3 z-100 flex items-center justify-between"
   href="https://api.whatsapp.com/send?phone=201282705753"
   target="_blank"
 >
-  <i class="fa-brands fa-whatsapp fa-2xl me-2"></i>
-  <span> Need Help </span>
+  <i
+    class="fa-brands fa-whatsapp fa-2xl me-2 fade-text"
+    [class.fade]="isFading"
+  ></i>
+  <span class="fade-text" [class.fade]="isFading">{{ whatsAppText() }} </span>
 </a>
