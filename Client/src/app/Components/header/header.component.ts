@@ -64,7 +64,7 @@ export class HeaderComponent implements OnInit {
 
         // Start fade-in
         this.isFading = false;
-      }, 400); // Must match CSS transition time
-    }, 3000);
+      }, 500); // Must match CSS transition time
+    }, 5000);
   }
 }

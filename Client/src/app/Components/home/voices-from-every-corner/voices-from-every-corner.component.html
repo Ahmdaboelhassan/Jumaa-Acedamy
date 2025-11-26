@@ -53,25 +53,19 @@
             </div>
           </div>
           <div class="col-span-2" appSlideUp>
-            <p
-              class="space-grotesk mt-10 mb-2 text-xs md:text-sm lg:text-lg min-h-[100px] fade-text"
+            <div
+              class="space-grotesk mt-10 mb-2 text-xs md:text-sm lg:text-lg min-h-[150px] md:min-h-[100px] fade-text"
               [class.fade]="isFading()"
               appSlideUp
             >
-              <q>{{ student().Comment }}</q>
+              <p>
+                <q>{{ student().Comment }}</q>
+              </p>
 
-              <br />
-              <span class="text-ternary">
-                {{ student().Name + ", " + student().Location }}</span
-              >
-            </p>
-            <div class="mt-2 flex justify-evenly items-center">
-              <div class="relative w-24 mx-2">
-                <img src="assets\voices\v3.jpg" alt="img1" loading="lazy" />
-              </div>
-              <div
-                class="text-xl md:text-2xl lg:text-4xl text-ternary -mt-15 hidden md:inline-flex"
-              >
+              <p class="text-ternary">
+                {{ student().Name + ", " + student().Location }}
+              </p>
+              <div class="text-xl md:text-2xl lg:text-4xl text-ternary mt-5">
                 @for (star of [].constructor(fullStars); track $index) {
                 <i class="fa-solid fa-star"></i>
                 }
@@ -86,11 +80,17 @@
                 <i class="fa-regular fa-star"></i>
                 }
               </div>
+            </div>
+            <div class="mt-2 flex justify-between items-center">
+              <div class="relative w-24 mx-2">
+                <img src="assets\voices\v3.jpg" alt="img1" loading="lazy" />
+              </div>
               <div class="relative w-24 mx-2">
                 <img src="assets\voices\v9.jpg" alt="img1" loading="lazy" />
               </div>
             </div>
             <button class="main-button mt-4">Join Now</button>
+
             <div class="flex justify-evenly items-center md:mt-5 mt-2">
               <div class="relative w-36 mx-2">
                 <img src="assets\voices\v6.jpg" alt="img1" loading="lazy" />

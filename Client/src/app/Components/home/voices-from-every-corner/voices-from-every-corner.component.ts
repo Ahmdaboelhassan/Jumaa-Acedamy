@@ -97,8 +97,8 @@ export class VoicesFromEveryCornerComponent implements AfterViewInit {
 
         this.student.set(this.students[this.currentStudent]);
         this.isFading.set(false);
-      }, 400);
-    }, 3000);
+      }, 500);
+    }, 5000);
   }
 
   get fullStars() {
