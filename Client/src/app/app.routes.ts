@@ -12,6 +12,6 @@ export const routes: Routes = [
   { path: 'Pricing-Plan', loadComponent: () => PricingPlansComponent },
   { path: 'About-Us', loadComponent: () => AboutUsComponent },
   { path: 'Contact-Us', loadComponent: () => ContactUsComponent },
-  { path: 'Free-Trail-Lesson', loadComponent: () => FreeTrailLessonComponent },
+  // { path: 'Free-Trail-Lesson', loadComponent: () => FreeTrailLessonComponent },
   { path: '**', redirectTo: '' },
 ];

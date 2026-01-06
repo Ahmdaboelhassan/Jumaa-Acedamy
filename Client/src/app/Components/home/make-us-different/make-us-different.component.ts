@@ -5,7 +5,7 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-make-us-different',
-  imports: [SlideUpDirective, RouterLink],
+  imports: [SlideUpDirective],
   templateUrl: './make-us-different.component.html',
   styleUrl: './make-us-different.component.css',
 })
